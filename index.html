@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nori vous présente… Chloé 🐾</title>
+<link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Bagel+Fat+One&family=Mochiy+Pop+One&family=Caveat:wght@500;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose-bonbon: #ff4fa3;
+    --rose-clair: #ffd6ec;
+    --rose-pastel: #ffeaf4;
+    --rose-fonce: #c2185b;
+    --blanc-creme: #fff8fb;
+    --noir-nori: #1a1a1a;
+    --vert-yeux: #8fd66e;
+    --ombre: 0 8px 24px rgba(255, 79, 163, 0.25);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--rose-pastel);
+    color: #4a2c3a;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Empreintes de pattes flottantes en fond */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%23ffb8db' opacity='0.45'><ellipse cx='50' cy='65' rx='14' ry='17'/><ellipse cx='28' cy='38' rx='7' ry='9'/><ellipse cx='45' cy='25' rx='7' ry='9'/><ellipse cx='65' cy='25' rx='7' ry='9'/><ellipse cx='82' cy='38' rx='7' ry='9'/></g></svg>");
+    background-size: 110px 110px;
+    background-repeat: repeat;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .container { position: relative; z-index: 1; }
+
+  /* ============ HEADER ============ */
+  header {
+    background: linear-gradient(135deg, var(--rose-bonbon), #ff80c0);
+    padding: 1rem 2rem;
+    box-shadow: var(--ombre);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 2px 2px 0 var(--rose-fonce);
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  nav a:hover {
+    background: white;
+    color: var(--rose-bonbon);
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--rose-bonbon);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 0 white;
+  }
+
+  .hero-text h1 .princesse {
+    color: var(--rose-fonce);
+    display: inline-block;
+    transform: rotate(-3deg);
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #6b3850;
+  }
+
+  .signature {
+    font-family: 'Pacifico', cursive;
+    color: var(--noir-nori);
+    font-size: 1.3rem;
+  }
+
+  .hero-photo {
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 50% 50% 45% 55% / 50% 50% 50% 50%;
+    border: 8px solid white;
+    box-shadow: var(--ombre);
+    transform: rotate(2deg);
+    transition: transform 0.4s;
+  }
+
+  .hero-photo img:hover { transform: rotate(-2deg) scale(1.02); }
+
+  .hero-photo::before {
+    content: "👑";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+    z-index: 2;
+  }
+
+  .coeur-flottant {
+    position: absolute;
+    font-size: 2rem;
+    animation: flotter 3s ease-in-out infinite;
+  }
+
+  .coeur-flottant.c1 { top: 10%; left: 5%; animation-delay: 0s; }
+  .coeur-flottant.c2 { top: 60%; right: 5%; animation-delay: 1s; }
+  .coeur-flottant.c3 { bottom: 10%; left: 15%; animation-delay: 2s; }
+
+  @keyframes flotter {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+  }
+
+  /* ============ SECTIONS ============ */
+  section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--rose-bonbon);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    content: "🐾";
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    vertical-align: middle;
+  }
+
+  /* ============ PRÉSENTATION ============ */
+  .presentation {
+    background: white;
+    border-radius: 40px;
+    padding: 3rem;
+    box-shadow: var(--ombre);
+    margin: 3rem auto;
+    position: relative;
+    border: 3px dashed var(--rose-clair);
+  }
+
+  .presentation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .presentation img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: var(--ombre);
+    transform: rotate(-3deg);
+  }
+
+  .bulle-nori {
+    background: var(--rose-clair);
+    border-radius: 25px;
+    padding: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+  }
+
+  .bulle-nori::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 25px 15px 0;
+    border-color: transparent var(--rose-clair) transparent transparent;
+  }
+
+  .bulle-nori p { margin-bottom: 1rem; }
+  .bulle-nori p:last-child { margin-bottom: 0; }
+
+  .miaou {
+    font-family: 'Pacifico', cursive;
+    color: var(--rose-bonbon);
+    font-size: 1.4rem;
+  }
+
+  /* ============ FICHE D'IDENTITÉ ============ */
+  .fiche {
+    background: linear-gradient(135deg, white, var(--rose-pastel));
+    border-radius: 30px;
+    box-shadow: var(--ombre);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid var(--rose-bonbon);
+    position: relative;
+  }
+
+  .fiche-header {
+    background: var(--rose-bonbon);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .fiche-header h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+  }
+
+  .fiche-header .tampon {
+    background: white;
+    color: var(--rose-bonbon);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    transform: rotate(-5deg);
+    border: 2px dashed var(--rose-bonbon);
+  }
+
+  .fiche-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .fiche-photo {
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .fiche-infos { list-style: none; }
+
+  .fiche-infos li {
+    padding: 0.6rem 0;
+    border-bottom: 1px dotted var(--rose-clair);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .fiche-infos li:last-child { border-bottom: none; }
+
+  .fiche-infos .label {
+    font-weight: 700;
+    color: var(--rose-fonce);
+  }
+
+  .fiche-infos .label::before {
+    content: "🐾 ";
+  }
+
+  /* Empreintes signature en bas de la fiche */
+  .empreintes-signature {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    background: var(--rose-pastel);
+    color: var(--rose-bonbon);
+  }
+
+  /* ============ LA VÉRITÉ (humour) ============ */
+  .verite {
+    background: linear-gradient(135deg, #fff5d6, #ffe8a3);
+    border-radius: 40px;
+    padding: 3rem;
+    margin: 3rem auto;
+    box-shadow: var(--ombre);
+    text-align: center;
+    position: relative;
+    border: 3px dashed #f9c74f;
+  }
+
+  .verite .alerte {
+    background: var(--rose-bonbon);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    transform: rotate(-3deg);
+  }
+
+  .verite h2 {
+    font-family: 'Pacifico', cursive;
+    color: #b87800;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .verite p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .souris-scene {
+    background: white;
+    border-radius: 25px;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .emoji-grand {
+    font-size: 3rem;
+    animation: bouger 2s ease-in-out infinite;
+  }
+
+  @keyframes bouger {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+  }
+
+  /* ============ GALERIE ============ */
+  .galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .galerie-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: var(--ombre);
+    transition: transform 0.3s;
+    text-align: center;
+  }
+
+  .galerie-item:nth-child(odd) { transform: rotate(-2deg); }
+  .galerie-item:nth-child(even) { transform: rotate(2deg); }
+
+  .galerie-item:hover {
+    transform: rotate(0) scale(1.05);
+    z-index: 2;
+  }
+
+  .galerie-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 0.8rem;
+    cursor: zoom-in;
+  }
+
+  .galerie-photo::after {
+    content: "🔍";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .galerie-photo:hover::after { opacity: 1; }
+
+  .galerie-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.4s;
+  }
+
+  .galerie-photo:hover img { transform: scale(1.05); }
+
+  .galerie-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.3rem;
+  }
+
+  .galerie-item .legende {
+    font-family: 'Pacifico', cursive;
+    color: var(--rose-bonbon);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .like-btn {
+    background: white;
+    border: 2px solid var(--rose-clair);
+    color: var(--rose-bonbon);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.25s;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .like-btn:hover {
+    background: var(--rose-pastel);
+    transform: scale(1.05);
+  }
+
+  .like-btn.liked {
+    background: var(--rose-bonbon);
+    color: white;
+    border-color: var(--rose-bonbon);
+  }
+
+  .like-btn .like-icon {
+    font-size: 1.05rem;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+
+  .like-btn.bump .like-icon {
+    animation: bump 0.5s ease-out;
+  }
+
+  @keyframes bump {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.5) rotate(-10deg); }
+    60% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+
+  /* Petits cœurs qui s'envolent au like */
+  .float-heart {
+    position: fixed;
+    pointer-events: none;
+    font-size: 1.5rem;
+    z-index: 9999;
+    animation: floatUp 1s ease-out forwards;
+  }
+
+  @keyframes floatUp {
+    0%   { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -80px) scale(1.6); }
+  }
+
+  /* ============ LIGHTBOX ============ */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 5, 15, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    padding: 2rem;
+  }
+
+  .lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+
+  .lightbox.open .lightbox-content { transform: scale(1); }
+
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(255, 79, 163, 0.4);
+    object-fit: contain;
+    background: white;
+  }
+
+  .lightbox-caption {
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .lightbox-close,
+  .lightbox-nav {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-close {
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    font-size: 2.5rem;
+    line-height: 1;
+    padding-bottom: 6px;
+  }
+
+  .lightbox-prev { left: 1.5rem; }
+  .lightbox-next { right: 1.5rem; }
+
+  .lightbox-close:hover,
+  .lightbox-nav:hover {
+    background: var(--rose-bonbon);
+    border-color: var(--rose-bonbon);
+    transform: scale(1.1);
+  }
+
+  .lightbox-nav:hover { transform: translateY(-50%) scale(1.1); }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: linear-gradient(135deg, var(--rose-bonbon), #ff80c0);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer .footer-paw {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  footer p { margin-bottom: 0.5rem; }
+
+  footer .signature-finale {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  /* ============ TOGGLE MODE (+/- 10 ans) ============ */
+  .mode-toggle {
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.18);
+    padding: 4px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .mode-btn {
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  .mode-btn.active {
+    background: white;
+    color: var(--rose-bonbon);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .mode-btn:hover:not(.active) {
+    color: white;
+  }
+
+  /* ============ MODE ADO (+ de 10 ans) — STYLE MANGA KAWAII ============ */
+  body.mode-teen {
+    --rose-bonbon: #ff3d8b;
+    --rose-clair: #ffe0ef;
+    --rose-pastel: #fff5fa;
+    --rose-fonce: #b8156e;
+    --lavande: #b794ff;
+    --peche: #ffb88c;
+    --jaune-soleil: #ffe16c;
+    --noir-trait: #1a0d1a;
+    --ombre: 8px 8px 0 var(--noir-trait);
+    color: var(--noir-trait);
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    background:
+      linear-gradient(135deg, #ffe9f3 0%, #f5e1ff 50%, #fff0e3 100%);
+    background-attachment: fixed;
+  }
+
+  /* Pattern halftone manga + sparkles animés */
+  body.mode-teen::before {
+    background-image:
+      radial-gradient(circle, rgba(255, 61, 139, 0.22) 1.5px, transparent 2px);
+    background-size: 22px 22px;
+    opacity: 0.55;
+    animation: halftoneShift 25s linear infinite;
+  }
+
+  @keyframes halftoneShift {
+    from { background-position: 0 0; }
+    to   { background-position: 220px 220px; }
+  }
+
+  /* Étoiles scintillantes en fond */
+  body.mode-teen::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(2px 2px at 10% 20%, white, transparent),
+      radial-gradient(2px 2px at 80% 60%, var(--lavande), transparent),
+      radial-gradient(1.5px 1.5px at 30% 80%, var(--rose-bonbon), transparent),
+      radial-gradient(2px 2px at 65% 30%, var(--jaune-soleil), transparent),
+      radial-gradient(1.5px 1.5px at 90% 90%, white, transparent),
+      radial-gradient(1.5px 1.5px at 15% 70%, var(--peche), transparent);
+    background-size: 280px 280px;
+    animation: twinkle 3.5s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.25; }
+    50%      { opacity: 0.9; }
+  }
+
+  /* HEADER manga */
+  body.mode-teen header {
+    background: linear-gradient(135deg, var(--rose-bonbon), var(--lavande));
+    border-bottom: 4px solid var(--noir-trait);
+    box-shadow: 0 4px 0 var(--noir-trait), 0 14px 30px rgba(255, 61, 139, 0.35);
+  }
+
+  body.mode-teen .logo {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 2rem;
+    color: white;
+    text-shadow:
+      -2px -2px 0 var(--noir-trait), 2px -2px 0 var(--noir-trait),
+      -2px 2px 0 var(--noir-trait), 2px 2px 0 var(--noir-trait),
+      5px 5px 0 var(--rose-fonce);
+    letter-spacing: 1px;
+    transform: rotate(-3deg);
+    display: inline-block;
+    animation: titleBounce 4s ease-in-out infinite;
+  }
+
+  body.mode-teen nav a {
+    font-family: 'Mochiy Pop One', sans-serif;
+    background: white;
+    color: var(--rose-bonbon);
+    border: 3px solid var(--noir-trait);
+    border-radius: 14px;
+    padding: 0.3rem 0.85rem;
+    box-shadow: 3px 3px 0 var(--noir-trait);
+    font-size: 0.78rem;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: all 0.2s;
+  }
+
+  body.mode-teen nav a:hover {
+    background: var(--jaune-soleil);
+    color: var(--noir-trait);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--noir-trait);
+    border-bottom: 3px solid var(--noir-trait);
+  }
+
+  body.mode-teen nav a:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--noir-trait);
+  }
+
+  /* Toggle pill manga */
+  body.mode-teen .mode-toggle {
+    background: white;
+    border: 3px solid var(--noir-trait);
+    box-shadow: 3px 3px 0 var(--noir-trait);
+    padding: 3px;
+  }
+
+  body.mode-teen .mode-btn {
+    color: var(--rose-bonbon);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 0.75rem;
+  }
+
+  body.mode-teen .mode-btn.active {
+    background: var(--rose-bonbon);
+    color: white;
+    box-shadow: 0 2px 0 var(--noir-trait);
+  }
+
+  /* HERO magical girl */
+  body.mode-teen .hero { min-height: 90vh; }
+
+  body.mode-teen .hero-text h1 {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    background: linear-gradient(135deg, var(--rose-bonbon) 0%, var(--lavande) 50%, var(--peche) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(4px 4px 0 var(--noir-trait));
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-shadow: none;
+  }
+
+  body.mode-teen .hero-text h1 .princesse {
+    display: inline-block;
+    animation: wobble 2.5s ease-in-out infinite;
+  }
+
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-5deg) translateY(0); }
+    50%      { transform: rotate(5deg) translateY(-6px); }
+  }
+
+  @keyframes titleBounce {
+    0%, 100% { transform: rotate(-3deg) scale(1); }
+    50%      { transform: rotate(-1deg) scale(1.03); }
+  }
+
+  body.mode-teen .hero-text p {
+    font-size: 1.15rem;
+    color: var(--noir-trait);
+    font-weight: 500;
+  }
+
+  body.mode-teen .hero-text p strong {
+    background: var(--jaune-soleil);
+    padding: 0.05em 0.4em;
+    border: 2px solid var(--noir-trait);
+    border-radius: 8px;
+    font-weight: 700;
+  }
+
+  body.mode-teen .signature {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--rose-bonbon);
+    -webkit-text-stroke: 1px var(--noir-trait);
+  }
+
+  /* Photo héro = polaroïd manga */
+  body.mode-teen .hero-photo img {
+    border: 5px solid var(--noir-trait);
+    border-radius: 24px;
+    box-shadow: 8px 8px 0 var(--noir-trait), 12px 12px 40px rgba(255, 61, 139, 0.35);
+    transform: rotate(3deg);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  body.mode-teen .hero-photo img:hover {
+    transform: rotate(-2deg) scale(1.03);
+  }
+
+  body.mode-teen .hero-photo::before {
+    content: "✨";
+    top: -30px;
+    left: -10px;
+    font-size: 3.5rem;
+    filter: drop-shadow(3px 3px 0 var(--noir-trait));
+    animation: sparkleSpin 3s linear infinite;
+    transform: none;
+    z-index: 5;
+  }
+
+  body.mode-teen .hero-photo {
+    position: relative;
+  }
+
+  body.mode-teen .hero-photo::after {
+    content: "💫";
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+    animation: sparkleSpin 4s linear infinite reverse;
+  }
+
+  @keyframes sparkleSpin {
+    0%   { transform: rotate(0deg) scale(1); }
+    50%  { transform: rotate(180deg) scale(1.3); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+
+  /* Cœurs flottants version manga – étoiles colorées */
+  body.mode-teen .coeur-flottant {
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+  }
+
+  /* Titres de section : gros, contour noir, gradient */
+  body.mode-teen .section-title {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: white;
+    -webkit-text-stroke: 3px var(--noir-trait);
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0 var(--rose-bonbon);
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  body.mode-teen .section-title::before,
+  body.mode-teen .section-title::after {
+    content: "✦";
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--rose-bonbon);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    margin: 0 1rem;
+    animation: sparkleSpin 2.5s linear infinite;
+    vertical-align: middle;
+  }
+
+  /* Carte présentation = sticker manga */
+  body.mode-teen .presentation {
+    background: white;
+    border: 4px solid var(--noir-trait);
+    border-radius: 28px;
+    box-shadow: var(--ombre);
+    position: relative;
+  }
+
+  body.mode-teen .presentation::before {
+    content: "💕";
+    position: absolute;
+    top: -25px;
+    right: 35px;
+    font-size: 3rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+    animation: heartPulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes heartPulse {
+    0%, 100% { transform: scale(1) rotate(-10deg); }
+    50%      { transform: scale(1.25) rotate(10deg); }
+  }
+
+  body.mode-teen .presentation img {
+    border: 4px solid var(--noir-trait);
+    border-radius: 20px;
+    box-shadow: 6px 6px 0 var(--noir-trait);
+    transform: rotate(-3deg);
+  }
+
+  /* Bulle de dialogue manga (double bord) */
+  body.mode-teen .bulle-nori {
+    background: white;
+    border: 4px solid var(--noir-trait);
+    border-radius: 30px;
+    box-shadow: 5px 5px 0 var(--noir-trait);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  body.mode-teen .bulle-nori::before {
+    left: -28px;
+    top: 30px;
+    border-width: 18px 28px 18px 0;
+    border-color: transparent var(--noir-trait) transparent transparent;
+  }
+
+  body.mode-teen .bulle-nori::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 33px;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 14px 22px 14px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  body.mode-teen .miaou {
+    font-family: 'Bagel Fat One', cursive;
+    color: var(--rose-bonbon);
+    font-size: 2rem;
+    -webkit-text-stroke: 2px var(--noir-trait);
+    paint-order: stroke fill;
+    display: inline-block;
+    transform: rotate(-3deg);
+    animation: titleBounce 2s ease-in-out infinite;
+  }
+
+  body.mode-teen .bulle-nori strong {
+    background: var(--jaune-soleil);
+    padding: 0.05em 0.35em;
+    border: 2px solid var(--noir-trait);
+    border-radius: 6px;
+    font-weight: 700;
+  }
+
+  body.mode-teen .bulle-nori em {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--rose-bonbon);
+    font-style: normal;
+  }
+
+  /* Fiche d'identité sticker */
+  body.mode-teen .fiche {
+    background: white;
+    border: 4px solid var(--noir-trait);
+    border-radius: 28px;
+    box-shadow: 10px 10px 0 var(--noir-trait);
+  }
+
+  body.mode-teen .fiche-header {
+    background: linear-gradient(90deg, var(--rose-bonbon), var(--lavande));
+    border-bottom: 4px solid var(--noir-trait);
+  }
+
+  body.mode-teen .fiche-header h3 {
+    font-family: 'Bagel Fat One', cursive;
+    color: white;
+    -webkit-text-stroke: 2px var(--noir-trait);
+    paint-order: stroke fill;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  body.mode-teen .fiche-header .tampon {
+    background: var(--jaune-soleil);
+    color: var(--noir-trait);
+    border: 3px solid var(--noir-trait);
+    border-radius: 999px;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 0.78rem;
+    padding: 0.4rem 1rem;
+    transform: rotate(-8deg);
+    box-shadow: 2px 2px 0 var(--noir-trait);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  body.mode-teen .fiche-photo {
+    border: 4px solid var(--noir-trait);
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 var(--noir-trait);
+    transform: rotate(-3deg);
+  }
+
+  body.mode-teen .fiche-infos .label {
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: var(--rose-bonbon);
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+  }
+
+  body.mode-teen .fiche-infos .label::before {
+    content: "✦ ";
+    color: var(--lavande);
+  }
+
+  body.mode-teen .fiche-infos li {
+    border-bottom: 2px dashed var(--rose-clair);
+  }
+
+  body.mode-teen .empreintes-signature {
+    background: linear-gradient(90deg, var(--rose-clair), var(--lavande), var(--rose-clair));
+    color: var(--noir-trait);
+    font-weight: 700;
+    border-top: 4px solid var(--noir-trait);
+  }
+
+  /* Vérité manga = panneau warning */
+  body.mode-teen .verite {
+    background: linear-gradient(135deg, #fff4d6 0%, #ffe1e9 100%);
+    border: 4px solid var(--noir-trait);
+    border-radius: 28px;
+    box-shadow: 10px 10px 0 var(--noir-trait);
+    position: relative;
+  }
+
+  body.mode-teen .verite::before {
+    content: "⚡";
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    font-size: 4rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+    animation: zap 1s ease-in-out infinite;
+  }
+
+  @keyframes zap {
+    0%, 100% { transform: rotate(-10deg) scale(1); }
+    50%      { transform: rotate(10deg) scale(1.15); }
+  }
+
+  body.mode-teen .verite .alerte {
+    background: var(--noir-trait);
+    color: var(--jaune-soleil);
+    border: 3px solid var(--noir-trait);
+    font-family: 'Mochiy Pop One', sans-serif;
+    border-radius: 999px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    transform: rotate(-3deg);
+    box-shadow: 3px 3px 0 var(--rose-bonbon);
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+
+  body.mode-teen .verite h2 {
+    font-family: 'Bagel Fat One', cursive;
+    color: var(--rose-bonbon);
+    -webkit-text-stroke: 2px var(--noir-trait);
+    paint-order: stroke fill;
+    font-size: 2.5rem;
+  }
+
+  body.mode-teen .verite p strong {
+    background: var(--jaune-soleil);
+    padding: 0.05em 0.4em;
+    border: 2px solid var(--noir-trait);
+    border-radius: 6px;
+  }
+
+  body.mode-teen .verite em {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--rose-bonbon);
+    font-style: normal;
+  }
+
+  body.mode-teen .souris-scene {
+    background: white;
+    border: 4px solid var(--noir-trait);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 var(--noir-trait);
+    font-weight: 600;
+  }
+
+  body.mode-teen .emoji-grand {
+    font-size: 4rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px) rotate(-5deg); }
+  }
+
+  /* Galerie sticker cards */
+  body.mode-teen .galerie-item {
+    background: white;
+    border: 4px solid var(--noir-trait);
+    border-radius: 20px;
+    box-shadow: 6px 6px 0 var(--noir-trait);
+    padding: 0.6rem;
+  }
+
+  body.mode-teen .galerie-item:nth-child(odd)  { transform: rotate(-2deg) !important; }
+  body.mode-teen .galerie-item:nth-child(even) { transform: rotate(2deg) !important; }
+
+  body.mode-teen .galerie-item:hover {
+    transform: rotate(0deg) translateY(-6px) !important;
+    box-shadow: 10px 10px 0 var(--noir-trait);
+    z-index: 3;
+  }
+
+  body.mode-teen .galerie-item img {
+    border: 3px solid var(--noir-trait);
+    border-radius: 14px;
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+
+  body.mode-teen .galerie-photo {
+    border-radius: 14px;
+  }
+
+  body.mode-teen .galerie-photo::after {
+    content: "✨";
+    background: var(--jaune-soleil);
+    border: 2px solid var(--noir-trait);
+    color: var(--noir-trait);
+    font-size: 1rem;
+    box-shadow: 2px 2px 0 var(--noir-trait);
+  }
+
+  body.mode-teen .galerie-item .legende {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--rose-bonbon);
+    -webkit-text-stroke: 0.5px var(--noir-trait);
+  }
+
+  /* Like manga */
+  body.mode-teen .like-btn {
+    background: white;
+    border: 3px solid var(--noir-trait);
+    color: var(--rose-bonbon);
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 0.78rem;
+    box-shadow: 2px 2px 0 var(--noir-trait);
+    border-radius: 999px;
+  }
+
+  body.mode-teen .like-btn:hover {
+    background: var(--jaune-soleil);
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--noir-trait);
+  }
+
+  body.mode-teen .like-btn.liked {
+    background: var(--rose-bonbon);
+    color: white;
+    box-shadow: 2px 2px 0 var(--noir-trait);
+  }
+
+  /* Lightbox manga */
+  body.mode-teen .lightbox {
+    background: rgba(26, 13, 26, 0.88);
+  }
+
+  body.mode-teen .lightbox-img {
+    border: 5px solid var(--noir-trait);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 var(--noir-trait), 0 20px 80px rgba(255, 61, 139, 0.5);
+  }
+
+  body.mode-teen .lightbox-caption {
+    font-family: 'Bagel Fat One', cursive;
+    color: white;
+    -webkit-text-stroke: 1.5px var(--noir-trait);
+    paint-order: stroke fill;
+    font-size: 1.8rem;
+  }
+
+  body.mode-teen .lightbox-close,
+  body.mode-teen .lightbox-nav {
+    background: white;
+    border: 3px solid var(--noir-trait);
+    color: var(--rose-bonbon);
+    box-shadow: 3px 3px 0 var(--noir-trait);
+    backdrop-filter: none;
+  }
+
+  body.mode-teen .lightbox-close:hover,
+  body.mode-teen .lightbox-nav:hover {
+    background: var(--rose-bonbon);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  body.mode-teen .lightbox-nav:hover { transform: translateY(-50%) scale(1.1); }
+
+  /* Footer manga */
+  body.mode-teen footer {
+    background: linear-gradient(135deg, var(--rose-bonbon), var(--lavande));
+    border-top: 4px solid var(--noir-trait);
+    color: white;
+  }
+
+  body.mode-teen footer .footer-paw {
+    font-size: 2.5rem;
+    filter: drop-shadow(2px 2px 0 var(--noir-trait));
+  }
+
+  body.mode-teen footer .signature-finale {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 2.2rem;
+    -webkit-text-stroke: 2px var(--noir-trait);
+    paint-order: stroke fill;
+    color: var(--jaune-soleil);
+    transform: rotate(-3deg);
+    display: inline-block;
+    animation: titleBounce 3s ease-in-out infinite;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .hero-grid,
+    .presentation-grid,
+    .fiche-body {
+      grid-template-columns: 1fr;
+    }
+
+    .bulle-nori::before { display: none; }
+
+    .fiche-photo {
+      margin: 0 auto;
+    }
+
+    section { padding: 3rem 1rem; }
+
+    .presentation, .verite { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER NAVIGATION -->
+  <header>
+    <nav>
+      <div class="logo">🐾 Nori &amp; Chloé</div>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#presentation">Ma Chloé</a></li>
+        <li><a href="#fiche">Ma fiche</a></li>
+        <li><a href="#verite">Chuuut…</a></li>
+        <li><a href="#galerie">Album</a></li>
+      </ul>
+      <div class="mode-toggle" role="group" aria-label="Choix du mode d'affichage">
+        <button type="button" class="mode-btn active" data-mode="kid">- de 10 ans</button>
+        <button type="button" class="mode-btn" data-mode="teen">+ de 10 ans</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <span class="coeur-flottant c1">💕</span>
+    <span class="coeur-flottant c2">✨</span>
+    <span class="coeur-flottant c3">🌸</span>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Bienvenue chez <span class="princesse">Chloé</span> &amp; moi !</h1>
+        <p>Coucou, c'est <strong>Nori</strong>, le chat noir aux yeux verts.
+        Aujourd'hui je prends le clavier (avec mes coussinets, c'est compliqué)
+        pour vous présenter ma personne préférée au monde : <strong>ma Chloé</strong> 👑</p>
+        <p class="signature">— Miaou, Nori 🖤</p>
+      </div>
+      <div class="hero-photo">
+        <img src="Images/chloe-couronne.jpg" alt="Chloé portant une couronne, ma princesse" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÉSENTATION DE CHLOÉ -->
+  <section id="presentation">
+    <h2 class="section-title">Ma Chloé à moi</h2>
+
+    <div class="presentation">
+      <div class="presentation-grid">
+        <img src="Images/chloe-nori-jardin.jpg" alt="Chloé et Nori dans le jardin" />
+        <div class="bulle-nori">
+          <p class="miaou">Miaaaaou ! 💗</p>
+          <p>Chloé, c'est <strong>ma</strong> humaine. Elle est trop trop gentille,
+          elle me caresse, elle me parle, et surtout elle me donne plein de croquettes
+          (et parfois un petit bout de poulet, mais chut, faut pas le dire à maman).</p>
+          <p>Quand je dors, elle vient me faire des câlins.
+          Quand je joue, elle rigole avec moi.
+          Quand je fais ma sieste sur les bûches, elle me trouve <em>trop mignon</em>
+          (et elle a bien raison) 🌸</p>
+          <p>Bref, je l'aime de tout mon petit cœur de chat 🖤</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FICHE D'IDENTITÉ -->
+  <section id="fiche">
+    <h2 class="section-title">Ma fiche d'identité</h2>
+
+    <div class="fiche">
+      <div class="fiche-header">
+        <h3>Carte d'identité féline</h3>
+        <span class="tampon">★ Officiel ★</span>
+      </div>
+
+      <div class="fiche-body">
+        <img class="fiche-photo" src="Images/nori-voiture.jpg" alt="Photo officielle de Nori" />
+        <ul class="fiche-infos">
+          <li><span class="label">Prénom</span> <span>Nori</span></li>
+          <li><span class="label">Espèce</span> <span>Chat (le plus beau)</span></li>
+          <li><span class="label">Né(e)</span> <span>Un beau jour de 2020, à Lyon</span></li>
+          <li><span class="label">Couleur</span> <span>Noir total, intégral, profond</span></li>
+          <li><span class="label">Yeux</span> <span>Vert émeraude 💚</span></li>
+          <li><span class="label">Signe particulier</span> <span>Élégance naturelle</span></li>
+          <li><span class="label">Humaine préférée</span> <span>Chloé, évidemment 👑</span></li>
+          <li><span class="label">Activités</span> <span>Sieste, câlins, chasse… (oups)</span></li>
+        </ul>
+      </div>
+
+      <div class="empreintes-signature">🐾 🐾 🐾 🐾 🐾</div>
+    </div>
+  </section>
+
+  <!-- LA VÉRITÉ (HUMOUR) -->
+  <section id="verite">
+    <div class="verite">
+      <span class="alerte">⚠️ Chuuut, c'est un secret</span>
+      <h2>La vérité vraie sur mes journées…</h2>
+      <p>Bon, ok, je vous avoue tout. Je <em>dis</em> que je joue beaucoup avec Chloé…
+      Mais en vrai, à peine elle a le dos tourné…</p>
+
+      <p><strong>Je dors. 💤 Beaucoup. Vraiment beaucoup.</strong></p>
+
+      <p>Et quand je ne dors pas, je pars en mission top secrète :
+      <strong>chasser les souris et les oiseaux du jardin</strong> 🐭🐦
+      (oui, je suis un prédateur redoutable malgré mes airs de petite peluche).</p>
+
+      <div class="souris-scene">
+        <span class="emoji-grand">🐈‍⬛</span>
+        <span>…revient fièrement à la porte de la maison avec…</span>
+        <span class="emoji-grand">🐭</span>
+      </div>
+
+      <p style="margin-top: 1.5rem; font-style: italic;">
+        Chloé, si tu lis ça, je suis désolé pour le cadeau de mardi dernier 🫣</p>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie">
+    <h2 class="section-title">Notre album</h2>
+
+    <div class="galerie-grid">
+      <div class="galerie-item" data-id="voiture">
+        <div class="galerie-photo"><img src="Images/nori-voiture.jpg" alt="Nori sur la voiture" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Roi du capot 🚗</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="jardin">
+        <div class="galerie-photo"><img src="Images/chloe-nori-jardin.jpg" alt="Chloé et Nori dans le jardin" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Sieste avec ma Chloé 🌳</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="selfie">
+        <div class="galerie-photo"><img src="Images/chloe-selfie.jpg" alt="Selfie de Chloé" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Ma humaine préférée 💗</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="couronne">
+        <div class="galerie-photo"><img src="Images/chloe-couronne.jpg" alt="Chloé avec une couronne" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Princesse Chloé 👑</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="coussin">
+        <div class="galerie-photo"><img src="Images/nori-coussin.jpg" alt="Nori sur son coussin" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Trône royal 👑🐈‍⬛</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="langue">
+        <div class="galerie-photo"><img src="Images/nori-langue.jpg" alt="Nori tire la langue" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Mode "blep" activé 😛</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="oeil">
+        <div class="galerie-photo"><img src="Images/nori-oeil.jpg" alt="Gros plan sur l'œil vert de Nori" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Mes beaux yeux verts 💚</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+      <div class="galerie-item" data-id="souris">
+        <div class="galerie-photo"><img src="Images/nori-souris.svg" alt="Illustration de Nori avec une souris" /></div>
+        <div class="galerie-footer">
+          <p class="legende">Mon cadeau pour Chloé 🐭</p>
+          <button class="like-btn" type="button" aria-label="J'aime"><span class="like-icon">🤍</span><span class="like-count">0</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX (zoom photo) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" type="button" aria-label="Fermer">✕</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Précédente">‹</button>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Suivante">›</button>
+    <div class="lightbox-content">
+      <img class="lightbox-img" src="" alt="" />
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-paw">🐾 💕 🐾</div>
+    <p>Site fait avec beaucoup d'amour (et quelques poils noirs sur le clavier)</p>
+    <p>© 2026 — Nori &amp; Chloé pour la vie</p>
+    <p class="signature-finale">Miaou ! 🖤</p>
+  </footer>
+
+</div>
+
+<script>
+  // ========= Toggle mode -10 / +10 ans =========
+  const STORAGE_KEY = 'nori-mode';
+  const body = document.body;
+  const modeButtons = document.querySelectorAll('.mode-btn');
+
+  function applyMode(mode) {
+    if (mode === 'teen') {
+      body.classList.add('mode-teen');
+    } else {
+      body.classList.remove('mode-teen');
+    }
+    modeButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.mode === mode);
+    });
+  }
+
+  const savedMode = localStorage.getItem(STORAGE_KEY) || 'kid';
+  applyMode(savedMode);
+
+  modeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.dataset.mode;
+      localStorage.setItem(STORAGE_KEY, mode);
+      applyMode(mode);
+    });
+  });
+
+  // Petit clin d'œil : laisser une empreinte au clic
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('a, button, nav')) return;
+    const paw = document.createElement('span');
+    paw.textContent = '🐾';
+    paw.style.position = 'fixed';
+    paw.style.left = (e.clientX - 12) + 'px';
+    paw.style.top = (e.clientY - 12) + 'px';
+    paw.style.fontSize = '1.5rem';
+    paw.style.pointerEvents = 'none';
+    paw.style.zIndex = '9999';
+    paw.style.transition = 'all 1.2s ease-out';
+    document.body.appendChild(paw);
+    requestAnimationFrame(() => {
+      paw.style.transform = 'translateY(-40px) rotate(' + (Math.random() * 60 - 30) + 'deg)';
+      paw.style.opacity = '0';
+    });
+    setTimeout(() => paw.remove(), 1300);
+  });
+
+  // ========= LIKES =========
+  const LIKES_KEY = 'nori-likes';
+  const LIKED_KEY = 'nori-liked';
+  const likes = JSON.parse(localStorage.getItem(LIKES_KEY) || '{}');
+  const liked = JSON.parse(localStorage.getItem(LIKED_KEY) || '{}');
+
+  document.querySelectorAll('.galerie-item').forEach(item => {
+    const id = item.dataset.id;
+    const btn = item.querySelector('.like-btn');
+    const icon = btn.querySelector('.like-icon');
+    const count = btn.querySelector('.like-count');
+
+    count.textContent = likes[id] || 0;
+    if (liked[id]) {
+      btn.classList.add('liked');
+      icon.textContent = '❤️';
+    }
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isLiked = btn.classList.toggle('liked');
+      likes[id] = Math.max(0, (likes[id] || 0) + (isLiked ? 1 : -1));
+      liked[id] = isLiked;
+      count.textContent = likes[id];
+      icon.textContent = isLiked ? '❤️' : '🤍';
+      localStorage.setItem(LIKES_KEY, JSON.stringify(likes));
+      localStorage.setItem(LIKED_KEY, JSON.stringify(liked));
+
+      btn.classList.remove('bump');
+      void btn.offsetWidth;
+      btn.classList.add('bump');
+
+      if (isLiked) {
+        const rect = btn.getBoundingClientRect();
+        for (let i = 0; i < 4; i++) {
+          const h = document.createElement('span');
+          h.className = 'float-heart';
+          h.textContent = ['💗', '💖', '💕', '🩷'][i % 4];
+          h.style.left = (rect.left + rect.width / 2 + (Math.random() * 40 - 20)) + 'px';
+          h.style.top = rect.top + 'px';
+          h.style.animationDelay = (i * 0.1) + 's';
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 1100 + i * 100);
+        }
+      }
+    });
+  });
+
+  // ========= LIGHTBOX =========
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const photos = Array.from(document.querySelectorAll('.galerie-photo'));
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const photo = photos[index];
+    const img = photo.querySelector('img');
+    const legende = photo.parentElement.querySelector('.legende').textContent;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = legende;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function navigate(delta) {
+    currentIndex = (currentIndex + delta + photos.length) % photos.length;
+    openLightbox(currentIndex);
+  }
+
+  photos.forEach((photo, i) => {
+    photo.addEventListener('click', () => openLightbox(i));
+  });
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigate(-1);
+  });
+  lightbox.querySelector('.lightbox-next').addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigate(1);
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') navigate(-1);
+    else if (e.key === 'ArrowRight') navigate(1);
+  });
+
+  // Animation douce à l'apparition des sections
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(s => {
+    s.style.opacity = '0';
+    s.style.transform = 'translateY(30px)';
+    s.style.transition = 'opacity 0.8s, transform 0.8s';
+    observer.observe(s);
+  });
+</script>
+
+</body>
+</html>

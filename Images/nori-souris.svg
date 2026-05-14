@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffeaf4"/>
+      <stop offset="100%" stop-color="#ffd6ec"/>
+    </radialGradient>
+    <linearGradient id="furBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#c8f08c"/>
+      <stop offset="60%" stop-color="#8fd66e"/>
+      <stop offset="100%" stop-color="#4a8c2a"/>
+    </radialGradient>
+    <radialGradient id="mouseBody" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#d8d0c8"/>
+      <stop offset="100%" stop-color="#9a8e80"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fond rose -->
+  <rect width="600" height="600" fill="url(#bg)"/>
+
+  <!-- Empreintes de pattes décoratives -->
+  <g fill="#ffb8db" opacity="0.5">
+    <g transform="translate(60, 80) scale(0.5)">
+      <ellipse cx="0" cy="20" rx="14" ry="17"/>
+      <ellipse cx="-22" cy="-7" rx="7" ry="9"/>
+      <ellipse cx="-5" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="15" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="32" cy="-7" rx="7" ry="9"/>
+    </g>
+    <g transform="translate(520, 130) scale(0.4) rotate(20)">
+      <ellipse cx="0" cy="20" rx="14" ry="17"/>
+      <ellipse cx="-22" cy="-7" rx="7" ry="9"/>
+      <ellipse cx="-5" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="15" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="32" cy="-7" rx="7" ry="9"/>
+    </g>
+    <g transform="translate(80, 480) scale(0.45) rotate(-15)">
+      <ellipse cx="0" cy="20" rx="14" ry="17"/>
+      <ellipse cx="-22" cy="-7" rx="7" ry="9"/>
+      <ellipse cx="-5" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="15" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="32" cy="-7" rx="7" ry="9"/>
+    </g>
+    <g transform="translate(530, 510) scale(0.5)">
+      <ellipse cx="0" cy="20" rx="14" ry="17"/>
+      <ellipse cx="-22" cy="-7" rx="7" ry="9"/>
+      <ellipse cx="-5" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="15" cy="-20" rx="7" ry="9"/>
+      <ellipse cx="32" cy="-7" rx="7" ry="9"/>
+    </g>
+  </g>
+
+  <!-- Petits cœurs flottants -->
+  <text x="490" y="80" font-size="28" fill="#ff4fa3">💕</text>
+  <text x="100" y="200" font-size="22" fill="#ff4fa3">✨</text>
+  <text x="460" y="300" font-size="20" fill="#ff4fa3">🌸</text>
+
+  <!-- Sol/herbe stylisé -->
+  <ellipse cx="300" cy="540" rx="220" ry="30" fill="#ffb8db" opacity="0.6"/>
+
+  <!-- CORPS DE NORI (chat noir assis) -->
+  <!-- Queue -->
+  <path d="M 420 470 Q 500 460 510 380 Q 515 340 480 350" stroke="url(#furBody)" stroke-width="28" stroke-linecap="round" fill="none"/>
+
+  <!-- Corps -->
+  <ellipse cx="300" cy="430" rx="110" ry="120" fill="url(#furBody)"/>
+
+  <!-- Pattes avant -->
+  <ellipse cx="255" cy="525" rx="22" ry="18" fill="#0a0a0a"/>
+  <ellipse cx="345" cy="525" rx="22" ry="18" fill="#0a0a0a"/>
+
+  <!-- Tête -->
+  <ellipse cx="300" cy="290" rx="105" ry="95" fill="url(#furBody)"/>
+
+  <!-- Oreilles -->
+  <polygon points="220,235 215,160 275,210" fill="#0a0a0a"/>
+  <polygon points="380,235 385,160 325,210" fill="#0a0a0a"/>
+  <polygon points="228,225 230,180 263,212" fill="#ff80c0" opacity="0.6"/>
+  <polygon points="372,225 370,180 337,212" fill="#ff80c0" opacity="0.6"/>
+
+  <!-- Yeux verts -->
+  <ellipse cx="265" cy="285" rx="22" ry="26" fill="url(#eye)"/>
+  <ellipse cx="335" cy="285" rx="22" ry="26" fill="url(#eye)"/>
+  <!-- Pupilles fines (chat content/satisfait) -->
+  <ellipse cx="265" cy="285" rx="3" ry="20" fill="#000"/>
+  <ellipse cx="335" cy="285" rx="3" ry="20" fill="#000"/>
+  <!-- Reflets -->
+  <circle cx="270" cy="278" r="4" fill="white"/>
+  <circle cx="340" cy="278" r="4" fill="white"/>
+
+  <!-- Nez rose -->
+  <path d="M 290 325 L 310 325 L 300 338 Z" fill="#ff80c0"/>
+
+  <!-- Bouche (qui tient la souris) -->
+  <path d="M 300 338 Q 285 355 270 350" stroke="#000" stroke-width="2" fill="none"/>
+  <path d="M 300 338 Q 315 355 330 350" stroke="#000" stroke-width="2" fill="none"/>
+
+  <!-- Moustaches -->
+  <line x1="220" y1="330" x2="170" y2="320" stroke="white" stroke-width="1.5"/>
+  <line x1="220" y1="340" x2="170" y2="345" stroke="white" stroke-width="1.5"/>
+  <line x1="380" y1="330" x2="430" y2="320" stroke="white" stroke-width="1.5"/>
+  <line x1="380" y1="340" x2="430" y2="345" stroke="white" stroke-width="1.5"/>
+
+  <!-- LA SOURIS dans la gueule -->
+  <g transform="translate(260, 350)">
+    <!-- Corps de la souris -->
+    <ellipse cx="0" cy="0" rx="35" ry="22" fill="url(#mouseBody)"/>
+    <!-- Tête de la souris -->
+    <ellipse cx="-28" cy="-5" rx="18" ry="15" fill="url(#mouseBody)"/>
+    <!-- Oreilles rondes -->
+    <circle cx="-35" cy="-18" r="8" fill="#b8a8a0"/>
+    <circle cx="-22" cy="-20" r="8" fill="#b8a8a0"/>
+    <circle cx="-35" cy="-18" r="4" fill="#ff80c0"/>
+    <circle cx="-22" cy="-20" r="4" fill="#ff80c0"/>
+    <!-- Œil de la souris (X car… vous savez) -->
+    <text x="-32" y="-2" font-size="12" font-weight="bold" fill="#000">✕</text>
+    <!-- Nez -->
+    <circle cx="-44" cy="-2" r="2.5" fill="#ff4fa3"/>
+    <!-- Petites moustaches souris -->
+    <line x1="-44" y1="0" x2="-55" y2="-3" stroke="#666" stroke-width="0.8"/>
+    <line x1="-44" y1="2" x2="-55" y2="3" stroke="#666" stroke-width="0.8"/>
+    <!-- Queue qui dépasse -->
+    <path d="M 30 5 Q 70 0 85 25 Q 90 40 75 45" stroke="#9a8e80" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bulle "Cadeau pour Chloé !" -->
+  <g transform="translate(420, 220)">
+    <ellipse cx="0" cy="0" rx="85" ry="45" fill="white" stroke="#ff4fa3" stroke-width="3"/>
+    <path d="M -45 30 Q -60 50 -75 55" stroke="#ff4fa3" stroke-width="3" fill="white"/>
+    <text x="0" y="-8" font-family="Pacifico, cursive" font-size="16" fill="#ff4fa3" text-anchor="middle">Cadeau</text>
+    <text x="0" y="14" font-family="Pacifico, cursive" font-size="16" fill="#ff4fa3" text-anchor="middle">pour Chloé !</text>
+  </g>
+
+  <!-- Petits cœurs flottants autour -->
+  <text x="380" y="180" font-size="20" fill="#ff4fa3">💗</text>
+  <text x="180" y="380" font-size="18" fill="#ff4fa3">🐾</text>
+</svg>
